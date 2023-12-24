@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { AppNav, CurrentWeather } from "./components"
 import { Route, Routes, BrowserRouter } from "react-router-dom"
-import { Home } from "./pages"
+import { Home, Forecast } from "./pages"
 
 const queryClient = new QueryClient()
 
@@ -14,8 +14,7 @@ function App() {
         <Routes>
           <Route path="/home" exact element={<Home />} />
           <Route path="/current" exact element={<CurrentWeather />} />
-          <Route path="/current" exact element={<h1>Home</h1>} />
-          <Route path="/current" exact element={<h1>Home</h1>} />
+          <Route path="/forecast" exact element={<Forecast />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
