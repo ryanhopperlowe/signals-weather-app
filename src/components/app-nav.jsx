@@ -38,7 +38,7 @@ export function AppNav() {
       </div>
 
       <div className="flex gap-4 text-blue-500">
-        <Link className={linkClass} to="/home">
+        <Link className={linkClass} to="/">
           Home
         </Link>
         <Link className={linkClass} to="/current">

@@ -12,7 +12,7 @@ function App() {
         <AppNav />
 
         <Routes>
-          <Route path="/home" exact element={<Home />} />
+          <Route path="/" exact element={<Home />} />
           <Route path="/current" exact element={<CurrentWeather />} />
           <Route path="/forecast" exact element={<Forecast />} />
         </Routes>
