@@ -56,9 +56,16 @@ export function CurrentWeather() {
   )
 }
 
-function fetchCurrentWeather(zip) {
+async function fetchCurrentWeather(zip) {
   const key = import.meta.env.VITE_WEATHER_API_KEY
-  return fetch(`${ApiRoutes.currentWeather}?q=${zip}&key=${key}`).then((res) =>
-    res.json()
+  const response = await fetch(
+    `${ApiRoutes.currentWeather}?q=${zip}&key=${key}`
   )
+
+  if (!response.ok) {
+    const { error } = await response.json()
+    throw new Error(error?.message || "Failed to fetch weather data")
+  }
+
+  return response.json()
 }
