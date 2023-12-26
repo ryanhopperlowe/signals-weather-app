@@ -1,6 +1,6 @@
 # React + Vite + Bun + Signals
 
-This is a project that I'm using to test the practical usage of signals in React, as well as lets me practice with some less common tools like Bun and Vite
+This is a project that I'm using to test the practical usage of signals in React, as well as practice with some newer tools like Bun and Vite
 
 ## Prereqs
 
